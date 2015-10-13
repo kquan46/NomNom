@@ -17,10 +17,6 @@
                             "count": 1
                         },
                         {
-                            "xml": "<feature name=\"Notification\"><param name=\"android-package\" value=\"org.apache.cordova.dialogs.Notification\" /></feature>",
-                            "count": 1
-                        },
-                        {
                             "xml": "<feature name=\"NetworkStatus\"><param name=\"android-package\" value=\"org.apache.cordova.networkinformation.NetworkManager\" /></feature>",
                             "count": 1
                         }
@@ -31,15 +27,15 @@
                 "parents": {
                     "/*": [
                         {
+                            "xml": "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\" />",
+                            "count": 1
+                        },
+                        {
                             "xml": "<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\" />",
                             "count": 1
                         },
                         {
                             "xml": "<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\" />",
                             "count": 1
                         }
                     ]
@@ -54,13 +50,10 @@
         "cordova-plugin-device": {
             "PACKAGE_NAME": "com.cs410.nomnom"
         },
-        "cordova-plugin-geolocation": {
-            "PACKAGE_NAME": "com.cs410.nomnom"
-        },
-        "cordova-plugin-dialogs": {
-            "PACKAGE_NAME": "com.cs410.nomnom"
-        },
         "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "com.cs410.nomnom"
+        },
+        "cordova-plugin-geolocation": {
             "PACKAGE_NAME": "com.cs410.nomnom"
         },
         "cordova-plugin-console": {

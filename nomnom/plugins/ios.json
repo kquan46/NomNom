@@ -13,15 +13,11 @@
                             "count": 1
                         },
                         {
-                            "xml": "<feature name=\"Geolocation\"><param name=\"ios-package\" value=\"CDVLocation\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"Notification\"><param name=\"ios-package\" value=\"CDVNotification\" /></feature>",
-                            "count": 1
-                        },
-                        {
                             "xml": "<feature name=\"NetworkStatus\"><param name=\"ios-package\" value=\"CDVConnection\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Geolocation\"><param name=\"ios-package\" value=\"CDVLocation\" /></feature>",
                             "count": 1
                         },
                         {
@@ -33,21 +29,15 @@
             },
             "framework": {
                 "parents": {
-                    "CoreLocation.framework": [
-                        {
-                            "xml": false,
-                            "count": 1
-                        }
-                    ],
-                    "AudioToolbox.framework": [
-                        {
-                            "xml": true,
-                            "count": 1
-                        }
-                    ],
                     "SystemConfiguration.framework": [
                         {
                             "xml": true,
+                            "count": 1
+                        }
+                    ],
+                    "CoreLocation.framework": [
+                        {
+                            "xml": false,
                             "count": 1
                         }
                     ]
@@ -72,13 +62,10 @@
         "cordova-plugin-device": {
             "PACKAGE_NAME": "com.cs410.nomnom"
         },
-        "cordova-plugin-geolocation": {
-            "PACKAGE_NAME": "com.cs410.nomnom"
-        },
-        "cordova-plugin-dialogs": {
-            "PACKAGE_NAME": "com.cs410.nomnom"
-        },
         "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "com.cs410.nomnom"
+        },
+        "cordova-plugin-geolocation": {
             "PACKAGE_NAME": "com.cs410.nomnom"
         },
         "cordova-plugin-console": {
