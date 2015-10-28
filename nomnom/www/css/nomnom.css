@@ -1,0 +1,104 @@
+.ui-page {
+	background-color: white;
+}
+
+header ul#menu {
+	list-style: none;
+	width: 100%;
+	overflow: auto;
+	padding: 0;
+	margin: 0;
+}
+
+header ul#menu > li.tab-button {
+	display: block;
+	width: 49.9%;
+	padding: 10px 0;
+	float: left;
+	text-align: center;
+	cursor: pointer;
+	border: 1px solid #ccc;
+	border-top: 2px solid #ccc;
+	background: #fff;
+}
+
+header ul#menu > li.tab-button.active {
+	font-weight: bold;
+	cursor: default;
+	border-top: 2px solid rgb(42, 42, 131);
+}
+
+#tab-content {
+	width: 98%;
+	margin: auto;
+}
+
+header {
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+
+#container {
+	width: 100%;
+	margin: auto;
+}
+
+body {
+	font-family: "Times New Roman", Times, serif;
+}
+
+body .ui-page {
+	padding-top: 10px;
+	padding-bottom: 35px;
+}
+
+.ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wrapper {
+	background-color: #F0F3F3;
+	border-color: #bbb;
+	color: #333;
+	text-shadow: 0 1px 0 #f3f3f3;
+}
+
+.form-control {
+	border: 2px solid #e8ebed;
+	border-radius: 2px;
+	box-shadow: none;
+	padding: 18px 12px;
+}
+
+.form-control:focus {
+	background: #fff;
+	border-color: #556b8d;
+	box-shadow: none;
+}
+
+.btn {
+	border: none;
+	font-size: 15px;
+	font-weight: normal;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-o-border-radius: 3px;
+	border-radius: 3px;
+	padding: 8px 14px;
+	margin-bottom: 5px;
+	-webkit-font-smoothing: subpixel-antialiased;
+	-webkit-transition: border 0.25s linear, color 0.25s linear, background-color 0.25s linear;
+}
+
+.btn-default {
+	color: #fff;
+	background-color: #5f779d;
+}
+
+.btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open .dropdown-toggle.btn-default {
+	color: #ffffff;
+	background-color: #5f779d;
+	border-color: #5f779d;
+}
+
+.btn:hover, .btn:focus {
+	outline: none;
+}

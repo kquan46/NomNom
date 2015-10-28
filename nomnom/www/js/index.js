@@ -16,6 +16,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+var controller = null;
 var app = {
     // Application Constructor
     initialize: function() {
@@ -33,6 +34,7 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
+        controller = new Controller();
         app.receivedEvent('deviceready');
     },
     // Update DOM on a Received Event
