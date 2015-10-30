@@ -62,6 +62,17 @@ angular.module('NOMApp', ['ionic', 'NOMController', 'achan.cordova.yelp'])
             }
         }
     })
+    
+    
+    .state('app.restdetail', {
+        url: '/search/:restid',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/restdetail.html',
+                controller: 'RestDetailController'
+            }
+        }
+    })
 
     .state('app.list', {
             url: '/list',

@@ -71,24 +71,41 @@ angular.module('NOMController', [])
     }
 })
 
-.controller('SearchController', function ($scope) {
+.controller('SearchController', function ($scope, $location, yelp) {
     $scope.search = {
         restname: "",
         category: "",
         price: "",
-        distance: ""
+        distance: "",
+        yelpsearchterm: ""
     };
 
-    $scope.searchrestaurant = function () {
-        if ($scope.search.restname !== "red") {
-            alert("restname not red");
-        } else
-            alert("its RED");
-        //alert("$scope.search.restname");
-        // TODO!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-        // name :$scope.search.restname, category: $scope.search.category, 
-        //     price: $scope.search.price, distance: $scope.search.price
+    $scope.go = function (path) {
+        $location.path(path);
     }
+
+    $scope.searchrestaurants = function () {
+
+        $scope.search.yelpsearchterm = $scope.search.restname;
+        $scope.search.yelpsearchterm += "+restaurant";
+
+        yelp.search({
+                location: 'Vancouver, BC',
+                oauth_version: '1.0',
+                term: $scope.search.yelpsearchterm,
+            })
+            .then(function (data) {
+                // data returned from Yelp
+                $scope.restaurants = data.businesses;
+                //            alert(data);
+            });
+
+    }
+})
+
+
+.controller('RestDetailController', function ($scope) {
+
 })
 
 .controller('VoteController', function ($scope, yelp) {
