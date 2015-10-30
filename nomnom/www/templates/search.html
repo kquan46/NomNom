@@ -1,0 +1,30 @@
+<ion-view view-title="Search">
+    <ion-content>
+        <h1>Search</h1>
+        <br> 
+        Restaurant Name:
+        <input type="text" ng-model="search.restname"/> 
+        Filter By:
+        <select ng-model="search.category">
+            <option value="">Category</option>
+            <option value="chinese">Chinese</option>
+            <option value="japanese">Japanese</option>
+            <option value="western">Western</option>
+        </select>
+        <select ng-model="search.price">
+            <option value="">Price</option>
+            <option value="1">$</option>
+            <option value="2">$$</option>
+            <option value="3">$$$</option>
+        </select>
+        <select ng-model="search.distance">
+            <option value="">Distance</option>
+            <option value="1">1 km</option>
+            <option value="5">5 km</option>
+            <option value="20">20 km</option>
+        </select>
+        <br>
+        <button ng-click="searchrestaurant()">Search Restaruants</button>
+        
+    </ion-content>
+</ion-view>
