@@ -1,5 +1,12 @@
 <ion-view view-title="Vote">
-  <ion-content>
-    <h1>Vote</h1>
-  </ion-content>
+    <ion-content>
+        <h1>Vote</h1>
+        <div class="list card" ng-repeat="r in restaurants">
+            <div class="item item-avatar">
+                <img src="{{r.image_url}}">
+                <h class="title">{{r.name}} <img src="{{r.rating_img_url_small}}"></h>
+                <p>{{r.location.address[0]}}, {{r.location.city}}, {{r.location.state_code}}</p>
+            </div>
+        </div>
+    </ion-content>
 </ion-view>

@@ -75,7 +75,8 @@ angular.module('NOMApp', ['ionic', 'NOMController', 'achan.cordova.yelp'])
             url: '/vote',
             views: {
                 'menuContent': {
-                    templateUrl: 'templates/vote.html'
+                    templateUrl: 'templates/vote.html',
+                    controller:'VoteController'
                 }
             }
         })

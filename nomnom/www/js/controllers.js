@@ -39,7 +39,7 @@ angular.module('NOMController', [])
             $scope.closeLogin();
         }, 1000);
     };
-    
+
     // Yelp search with following parameters
     yelp.search({
             location: 'Vancouver, BC',
@@ -49,7 +49,7 @@ angular.module('NOMController', [])
         })
         .then(function (data) {
             // data returned from Yelp
-            alert(JSON.stringify(data));
+            //            alert(JSON.stringify(data));
         });
 
 })
@@ -89,6 +89,20 @@ angular.module('NOMController', [])
         // name :$scope.search.restname, category: $scope.search.category, 
         //     price: $scope.search.price, distance: $scope.search.price
     }
+})
+
+.controller('VoteController', function ($scope, yelp) {
+    yelp.search({
+            location: 'Vancouver, BC',
+            oauth_version: '1.0',
+            term: 'food',
+        })
+        .then(function (data) {
+            // data returned from Yelp
+            $scope.restaurants = data.businesses;
+            //            alert(data);
+        });
+
 })
 
 .controller('PlaylistsController', function ($scope) {
